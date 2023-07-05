@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  background-color: green;
+  margin: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid none;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  font-size: 18px;
+}
+
+.button {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  border: 2px none;
+  border-radius: 5px;
+}
+.button:hover {
+  font-size: 18px;
+  background-color: green;
+  color: #ffffff;
+}

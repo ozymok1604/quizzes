@@ -1,0 +1,26 @@
+.flex_container {
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  background-color: aliceblue;
+  justify-content: center;
+  border: 2px solid none;
+  border-radius: 5px;
+}
+
+.header {
+  align-items: center;
+  font-size: 35px;
+
+  width: 150px;
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
