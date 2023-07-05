@@ -24,3 +24,27 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+.lucky_button {
+  align-items: center;
+  font-size: 20px;
+
+  text-align: center;
+  border: none;
+
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.lucky_button:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}

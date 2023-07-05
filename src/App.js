@@ -13,6 +13,8 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  const [quizName, setQuizName] = useState("");
+
   console.log(quizziz);
   return (
     <QuizzesContext.Provider
@@ -23,6 +25,8 @@ function App() {
         setResult,
         isLoading,
         setIsLoading,
+        quizName,
+        setQuizName,
       }}
     >
       <BrowserRouter>

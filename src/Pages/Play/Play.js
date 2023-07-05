@@ -11,22 +11,30 @@ import { shuffle } from "../../features/randomArray";
 import styles from "./styles.module.scss";
 
 const Play = () => {
-  const { quizziz, setResult, result } = useContext(QuizzesContext);
+  const { quizziz, setResult, setIsLoading, result, quizName } =
+    useContext(QuizzesContext);
 
   const [questionNumber, setQuestionNumber] = useState(0);
 
   const navigate = useNavigate();
 
-  const handleNavigate = (route) => navigate(route);
+  const handleNavigate = (route) => {
+    navigate(route);
+    setIsLoading(true);
+  };
 
   console.log(quizziz[questionNumber]?.correct_answer);
+
+  const onFinishQuestion = () => {
+    handleNavigate("/finish");
+  };
 
   const onAnswer = (answer) => {
     setQuestionNumber(questionNumber + 1);
     answer == quizziz[questionNumber]?.correct_answer
-      ? setResult(questionNumber + 1)
+      ? setResult(result + 1)
       : console.log("Incorrect!");
-    questionNumber == 9 ? handleNavigate("/finish") : console.log("play");
+    questionNumber == 9 ? onFinishQuestion() : console.log("play");
   };
 
   const isBoolean = quizziz[questionNumber].type === "boolean" ? true : false;
@@ -42,7 +50,9 @@ const Play = () => {
 
   return (
     <div>
+      <div className={styles.text}>You selected: {quizName}</div>
       <div className={styles.header}>Question {questionNumber + 1}</div>
+
       <div className={styles.flex_container}>
         <div className={styles.question}>
           {quizziz[questionNumber].question}
