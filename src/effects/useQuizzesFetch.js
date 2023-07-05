@@ -13,6 +13,7 @@ const useQuizzesFetch = (category) => {
 
   const getQuestions = async () => {
     try {
+      setIsLoading(true);
       const response = await axios(url + `amount=10&category=${category}`);
       setQuestions(response.data.results);
     } catch (error) {
