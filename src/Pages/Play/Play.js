@@ -91,7 +91,7 @@ const Play = () => {
           </div>
         )}
         <button
-          onClick={() => handleNavigate("/")}
+          onClick={() => handleNavigate("/mvp")}
           className={styles.cancel_button}
         >
           Cancel a Quiz
